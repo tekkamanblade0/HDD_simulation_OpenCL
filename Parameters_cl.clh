@@ -1,0 +1,38 @@
+//#pragma OPENCL EXTENSION cl_khr_fp64 : enable
+#define cl_double cl_float
+#define cl_double2 float2
+#define double float
+
+// Kernel configuration
+#define  BLOCK_SIZE_X      8
+#define  BLOCK_SIZE_Y      8
+#define  BLOCK_SIZE_Z      4
+#define  BLK_SZ_Z          4
+
+// Constant
+#define  PI              (double)3.14159265358979323846  //(double acos(double(-1.0)) //
+#define  ALPHA           (double)0.0075
+#define  GAMMA           (double)1.76e7 // /(1+pow(ALPHA, 2.0))
+#define  KB              (double)1.38e-16
+
+#define  Nx              256
+#define  Ny              32
+#define  Nz			     4
+#define  Nz_1            4   // FePt
+#define  Nz_2            4   // FeRh
+//#define  Nz_3            16   // FePt
+//#define  Nz_4            8   // Empty
+
+
+#define  ZERO            0.0
+#define  TOTAL_TIME      1100000//4800000//2666667//3800000//2533333//3000000//4000000
+#define  EQUI_START_TIME 1050000//4700000//2566667//3700000//2433333//
+#define  RECORDING_TIME  0//TOTAL_TIME / 4
+#define  DEG_FREEDOM     Nx*Ny*Nz*3
+#define  Ini_THETA_Up    0.01
+#define  Ini_THETA_Down  PI-0.01
+#define  MAX_CHAR_SZ  100
+#define  EXTTsize_x 401
+#define  EXTTsize_y 401
+#define  EXTHsize_x 1000
+#define  EXTHsize_y 1000
